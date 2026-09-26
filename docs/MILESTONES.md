@@ -12,7 +12,7 @@ Each small coherent increment is verified, committed and pushed to main. Impleme
 | 05 — Home header and tiles | Implemented | Analysis, 7 tests and both debug builds pass; six links return correctly; iOS text bounds within 1 logical pixel of reference after font calibration; Android capture reviewed |
 | 06 — Settings | Implemented | Analysis, 12 tests, both debug builds pass; iOS UI test and Android process restart preserve size; captures reviewed; final spacing sweep pending |
 | 07 — Shared content service | Implemented | Analysis and 13 focused tests pass: scalar decoding, canonical cache, exact expiry, single request, retained refresh, malformed/offline recovery, error mapping, timeout; live public contract inspected |
-| 08 — Trips card | Pending | Pending |
+| 08 — Trips card | Implemented | Analysis and controlled fixture test pass (mixed-script price, long title, 2× system text); both platform previews built and captured; loaded square artwork matches observed Swift crop |
 | 09 — Trips data and states | Pending | Pending |
 | 10 — Services card | Pending | Pending |
 | 11 — Services paging | Pending | Pending |

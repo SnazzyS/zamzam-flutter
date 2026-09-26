@@ -27,3 +27,7 @@ MV Waheed is a single regular face. Flutter synthetic bold and inherited Cuperti
 ## Settings review
 
 The segmented control uses a Flutter capsule to match the current Swift system picker silhouette. iOS and Android selection survives process restart. System font fallback differs between platforms. The iOS Settings section/card vertical positions remain approximately 2–3 logical pixels above the reference and are tracked for the final typography/spacing sweep.
+
+## Trips image sizing
+
+Source requests a 1.35 placeholder aspect ratio, but the Swift runtime renders loaded square package images at their natural square ratio. Flutter preserves this observed behavior, including the 1.35 loading/error placeholder. Controlled preview: `flutter run -t tool/previews/trips.dart`. Public artwork fixture was fetched from the existing package URL on 2026-09-27.

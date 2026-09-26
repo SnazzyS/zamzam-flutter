@@ -277,32 +277,69 @@ class ContentStatus extends StatelessWidget {
 }
 
 class RemoteImageBox extends StatelessWidget {
-  const RemoteImageBox(this.url, {super.key, this.aspectRatio = 1});
+  const RemoteImageBox(
+    this.url, {
+    super.key,
+    this.aspectRatio = 1,
+    this.naturalHeight = false,
+  });
   final Uri? url;
   final double aspectRatio;
+  final bool naturalHeight;
   @override
-  Widget build(BuildContext context) => AspectRatio(
-    aspectRatio: aspectRatio,
-    child: ColoredBox(
-      color: AppTheme.surfaceVariant,
-      child: ClipRect(
-        child: url == null
-            ? const _MissingImage()
-            : Image.network(
-                url.toString(),
-                fit: BoxFit.cover,
-                width: double.infinity,
-                height: double.infinity,
-                excludeFromSemantics: true,
-                loadingBuilder: (context, child, progress) => progress == null
-                    ? child
-                    : const Center(child: CupertinoActivityIndicator()),
-                errorBuilder: (context, error, stackTrace) =>
-                    const _MissingImage(),
+  Widget build(BuildContext context) => naturalHeight && url != null
+      ? LayoutBuilder(
+          builder: (context, constraints) => ConstrainedBox(
+            constraints: BoxConstraints(
+              minHeight: constraints.maxWidth / aspectRatio,
+            ),
+            child: Image.network(
+              url.toString(),
+              width: constraints.maxWidth,
+              fit: BoxFit.cover,
+              excludeFromSemantics: true,
+              loadingBuilder: (context, child, progress) => progress == null
+                  ? child
+                  : AspectRatio(
+                      aspectRatio: aspectRatio,
+                      child: const ColoredBox(
+                        color: AppTheme.surfaceVariant,
+                        child: Center(child: CupertinoActivityIndicator()),
+                      ),
+                    ),
+              errorBuilder: (context, error, stackTrace) => AspectRatio(
+                aspectRatio: aspectRatio,
+                child: const ColoredBox(
+                  color: AppTheme.surfaceVariant,
+                  child: _MissingImage(),
+                ),
               ),
-      ),
-    ),
-  );
+            ),
+          ),
+        )
+      : AspectRatio(
+          aspectRatio: aspectRatio,
+          child: ColoredBox(
+            color: AppTheme.surfaceVariant,
+            child: ClipRect(
+              child: url == null
+                  ? const _MissingImage()
+                  : Image.network(
+                      url.toString(),
+                      fit: BoxFit.cover,
+                      width: double.infinity,
+                      height: double.infinity,
+                      excludeFromSemantics: true,
+                      loadingBuilder: (context, child, progress) =>
+                          progress == null
+                          ? child
+                          : const Center(child: CupertinoActivityIndicator()),
+                      errorBuilder: (context, error, stackTrace) =>
+                          const _MissingImage(),
+                    ),
+            ),
+          ),
+        );
 }
 
 class _MissingImage extends StatelessWidget {
