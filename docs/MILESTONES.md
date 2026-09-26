@@ -13,7 +13,7 @@ Each small coherent increment is verified, committed and pushed to main. Impleme
 | 06 — Settings | Implemented | Analysis, 12 tests, both debug builds pass; iOS UI test and Android process restart preserve size; captures reviewed; final spacing sweep pending |
 | 07 — Shared content service | Implemented | Analysis and 13 focused tests pass: scalar decoding, canonical cache, exact expiry, single request, retained refresh, malformed/offline recovery, error mapping, timeout; live public contract inspected |
 | 08 — Trips card | Implemented | Analysis and controlled fixture test pass (mixed-script price, long title, 2× system text); both platform previews built and captured; loaded square artwork matches observed Swift crop |
-| 09 — Trips data and states | Pending | Pending |
+| 09 — Trips data and states | Implemented | Analysis, 27 regression tests and 2 focused screen-state tests pass; both debug builds pass; live iOS navigation/scroll retention test and Android loading/refresh captures pass; offline/cache paths covered by repository tests |
 | 10 — Services card | Pending | Pending |
 | 11 — Services paging | Pending | Pending |
 | 12 — Services data and states | Pending | Pending |

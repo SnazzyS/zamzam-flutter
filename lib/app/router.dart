@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import '../core/strings.dart';
 import '../features/settings/settings_view.dart';
 import '../features/home/home_view.dart';
+import '../features/content/content_screen.dart';
 import '../core/theme.dart';
 import 'glass_tab_bar.dart';
 
@@ -34,7 +35,9 @@ GoRouter createRouter({
                             GoRoute(
                               path: module.name,
                               builder: (context, state) =>
-                                  HomeDestinationHeader(module: module),
+                                  module == HomeModule.trips
+                                  ? const TripsView()
+                                  : HomeDestinationHeader(module: module),
                             ),
                           ...homeChildren,
                         ]
