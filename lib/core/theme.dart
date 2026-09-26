@@ -24,10 +24,14 @@ abstract final class AppTheme {
     Color color = text,
   }) => TextStyle(
     fontFamily: 'MV Waheed',
+    // Override Cupertino's SF-specific negative tracking for the bundled face.
+    letterSpacing: 0,
     fontSize: size,
-    fontWeight: weight,
+    // This bundled face has one regular weight; Swift does not synthesize bold.
+    fontWeight: FontWeight.w400,
     color: color,
-    height: 1.25,
+    // hhea ascent + descent = 1465 / 1000, matching the native line box.
+    height: 1.465,
   );
   static String image(String name) => 'assets/images/$name.png';
 }

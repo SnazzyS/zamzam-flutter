@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import '../core/strings.dart';
+import '../features/home/home_view.dart';
 import '../core/theme.dart';
 import 'glass_tab_bar.dart';
 
@@ -20,9 +21,21 @@ GoRouter createRouter({
                 GoRoute(
                   path: '/${tab.name}',
                   builder: roots[tab] == null
-                      ? (context, state) => _FeatureRoot(tab: tab)
+                      ? (context, state) => tab == RootTab.home
+                            ? const HomeView()
+                            : _FeatureRoot(tab: tab)
                       : (context, state) => roots[tab]!(context),
-                  routes: tab == RootTab.home ? homeChildren : const [],
+                  routes: tab == RootTab.home
+                      ? [
+                          for (final module in HomeModule.values)
+                            GoRoute(
+                              path: module.name,
+                              builder: (context, state) =>
+                                  HomeDestinationHeader(module: module),
+                            ),
+                          ...homeChildren,
+                        ]
+                      : const [],
                 ),
               ],
             ),

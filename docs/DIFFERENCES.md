@@ -19,3 +19,7 @@ Native material blur, font rasterization, native viewer details, accessibility a
 ## Navbar review
 
 iOS preserves SF Symbols intrinsic width/height for matching font sizes. Android Cupertino symbols differ in some glyphs (notably Member); layout and active states are shared. Glass uses a clipped Flutter blur rather than an Apple material, requiring final review over completed screens.
+
+## Dhivehi typography calibration
+
+MV Waheed is a single regular face. Flutter synthetic bold and inherited Cupertino SF tracking initially differed from Swift. Use regular weight, explicit zero tracking and the font ascent/descent line factor 1.465. iPhone 17 Pro capture: reference title bounds (936,320)-(1132,405), Flutter (938,319)-(1133,403); Trips label reference (812,971)-(962,1023), Flutter (813,969)-(961,1020), physical pixels at 3x. Remaining antialiasing differences are renderer-specific. Home tiles grow vertically with large system text to preserve readability.
