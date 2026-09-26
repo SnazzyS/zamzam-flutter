@@ -1,0 +1,214 @@
+[
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/Afternoon.imageset/Afternoon@1x.png",
+    "sha256": "e99e16804f5cf9d89ba222d363dc1fac07b590c3337930255a2887eb8b21ebca"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/Afternoon.imageset/Afternoon@2x.png",
+    "sha256": "11482e793f84607fa6fb0f0b2e28c7989cbefbe71767ca7e759860421861fb81"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/Afternoon.imageset/Afternoon@3x.png",
+    "sha256": "f55faa88f819aa40168386bc478aea90c0553e380bb601b110140bcac33e3f14"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/Evening.imageset/Evening@1x.png",
+    "sha256": "e349fd61b70c63c1609f620a9de090be42eb8baf4b10393fc7723bcbddee376b"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/Evening.imageset/Evening@2x.png",
+    "sha256": "4622c03d456adf40a74f075a281f78990760df01139121baff28b34c3184782c"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/Evening.imageset/Evening@3x.png",
+    "sha256": "264a8f4ccbe75bbf4c0d4a6125a5dbd6c57822d0f8e281cf8851344e5db482c7"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/Night.imageset/Night@1x.png",
+    "sha256": "ca95186ae41a07af4dac178c98849ac5697b212f701d059ce1871f05317a83dd"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/Night.imageset/Night@2x.png",
+    "sha256": "c07fab4646dd02be9f010b919f9a47920e92e34d1ae6a027fa81304474541313"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/Night.imageset/Night@3x.png",
+    "sha256": "58d0ae6b141e1b7da4f1999c1cfae233b8e4931a120280d679ede4a7d6028fd7"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/Sunrise.imageset/Sunrise@1x.png",
+    "sha256": "cc4ce1c2f1f138261964589bc57dcf6213bfac0f6b575497ae7e0a16d160686a"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/Sunrise.imageset/Sunrise@2x.png",
+    "sha256": "2d0983ecf04863aa5230c7aede0c360799c0d26ce7a8f1630d9f88f8b7cef74e"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/Sunrise.imageset/Sunrise@3x.png",
+    "sha256": "076a71e000029f8ff8953ac9ed8107e90656e3a373e3ae6b108dab3c5a7db7eb"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/Sunset.imageset/Sunset@1x.png",
+    "sha256": "6c8adb8deeada858c9d914ba0bbc3e75518d6b0f7deac15bc9b5369e45532d0b"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/Sunset.imageset/Sunset@2x.png",
+    "sha256": "2b7ae9c7aaeb2a8f70a95528a1f630a30dcf23c6603e6022225078b0e5fd17b1"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/Sunset.imageset/Sunset@3x.png",
+    "sha256": "8f8800f23f22e3d0441ecc7dcec35662d1839019c5e332b576296d5a78b75ce0"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/checklist-cloths.imageset/checklist-cloths.png",
+    "sha256": "c80293488ab6ec82ea89cf5486518424a027f3c7f5d58f07644497a0ce04bc4d"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/checklist-documents.imageset/checklist-documents.png",
+    "sha256": "76ebc904a3438066e0e4fd7a0bb20e1828b7fb77db0f5ecec0371554fef392f1"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/checklist-medicine.imageset/checklist-medicine.png",
+    "sha256": "d33834f99921fd608bcaa265166a2f05639eb48ff66676dcf2350dedd6e96c9e"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/checklist-money.imageset/checklist-money.png",
+    "sha256": "4b88dd9dfd547fc063677a4d36c3a1656b9393f647884f47987c3cfb58cfc788"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/checklist.imageset/checklist@1x.png",
+    "sha256": "2c133b18ce5ea394ab2a9f8d7ced4fc320d26a775483fc6f7f558dded47963f9"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/checklist.imageset/checklist@2x.png",
+    "sha256": "2fe12d6904cc5cc7a7454524bc961c1774a37230f8aaafc3bb67c30c238fed09"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/checklist.imageset/checklist@3x.png",
+    "sha256": "0c3d9d9d6c29d21ebc5e7b5e91993302656dfa569290a5c1e30b345f653d9409"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/jeddah-city-2.imageset/jeddah-city-2@1x.png",
+    "sha256": "d390692a2287f4abe29e922969378af2a98b44e13b7b8fd062733f26839a0cf4"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/jeddah-city-2.imageset/jeddah-city-2@2x.png",
+    "sha256": "b4188b43d573cef5077c9bd0aa6c8ac1bf892cc29599d886f8b1cd25f27e4122"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/jeddah-city-2.imageset/jeddah-city-2@3x.png",
+    "sha256": "bca0e34f5059dedc7bdb58e83eb11346dceb8bae87a5292cf00d0afa25996c0b"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/login-image-2.imageset/login-image-2.png",
+    "sha256": "2e77139764e16b6e193010636a72536049522c585c3f48b87d1872727a5f3223"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/madinah-city-2.imageset/madinah-city-2@1x.png",
+    "sha256": "48200f316c38ce295827e9e6762cc67263ea5f7ebf802b71bf5323ee0f43cded"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/madinah-city-2.imageset/madinah-city-2@2x.png",
+    "sha256": "d912fcaa1f9a674ea05c5a895e62ff681e9c222db3dd58c33ace5b86a40f354a"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/madinah-city-2.imageset/madinah-city-2@3x.png",
+    "sha256": "1e10aaeb8e22543e4fb3430484cdca3cbf1f1751b4b374e4121049082b024781"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/makkah-city-2.imageset/makkah-city-2@1x.png",
+    "sha256": "3eeccee666c1a67b2912358f244eecac09268687fe3d2a8d62150fd21a302939"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/makkah-city-2.imageset/makkah-city-2@2x.png",
+    "sha256": "02f880495bc01d50c32642f03441371fb3e842f827428772834bcdc969c77531"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/makkah-city-2.imageset/makkah-city-2@3x.png",
+    "sha256": "8162fc360b69134ae8499d8c121dd7dfa5c07870b22f9ade80d1732098a2a231"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/office-location.imageset/office-location.png",
+    "sha256": "c77f557f8630043356b0c3e04f4474605ea5497b0631b53f0a8b2268f58272f8"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/office.imageset/office@1x.png",
+    "sha256": "f4616c4b0c8f705d401deec6b5854f338803b4519f5f780601aaadb84d82e57a"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/office.imageset/office@2x.png",
+    "sha256": "c9d31434a0b63861f7c06f4209d349b68cf9f56e52d12fb83eb2b70c91c3f996"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/office.imageset/office@3x.png",
+    "sha256": "7eb10d846ecffffdd1fb8f60c5d01a336c1d223005e6ef90cd4c4d3229f4238f"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/services.imageset/services@1x.png",
+    "sha256": "5fb29a4c85379dad84a1e18a330f36746cdcf808c23227a166ce2ac320c30244"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/services.imageset/services@2x.png",
+    "sha256": "13919ab7c9602f0d91511d01757bfb7817f7fab06dcec12cdcf697cc94f82c2d"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/services.imageset/services@3x.png",
+    "sha256": "3a166261915ba2e8d9efa55bf909465872adf8cfbd4805a3d666f534d5e00636"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/supplication.imageset/supplication@1x.png",
+    "sha256": "dbeea9946020a85a9dc79de3c857565b7c39a631cd873f8f22c56c23726218ed"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/supplication.imageset/supplication@2x.png",
+    "sha256": "c9c1f51c66a73a08d66e55cdff7ad6d1483f36d55421787607b09a8d7d5658e6"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/supplication.imageset/supplication@3x.png",
+    "sha256": "0e8cb653a70512fcc06164a02e4d26af739365a4f9943c63404b9b56b90e757b"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/taif-city-2.imageset/taif-city-2@1x.png",
+    "sha256": "1f784faf7b789e3640cb24032fb1ff5f2e2f731cb2b31235bb0cdcd43b4f8455"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/taif-city-2.imageset/taif-city-2@2x.png",
+    "sha256": "d3980a3779aa954a79cc4e5e5b1ae4d0397f0e3262ee8bc2979811c342c565bd"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/taif-city-2.imageset/taif-city-2@3x.png",
+    "sha256": "089b1b529fd8d3b0572f72f4d4c91b7f0cfd12e483220c783be93665965b5dd2"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/trips.imageset/trips@1x.png",
+    "sha256": "b071e5f28a214f56b222eb74b8971469e1483f39dee5f497d2ddceea1bc641bb"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/trips.imageset/trips@2x.png",
+    "sha256": "b7d6dbbdf3eced9fbbf4582f727cd81ea26fada27d53765f7a6733bde4ea063a"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/trips.imageset/trips@3x.png",
+    "sha256": "0861c36497d4f5526443819d3e66eca4c8a2abfdf7cfc17bdebf93f667652bcb"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/umrah.imageset/umrah@1x.png",
+    "sha256": "68d5c0a09dcb5c64ec334f30a37d7ae631a8d324a1c0600346624a019580cd82"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/umrah.imageset/umrah@2x.png",
+    "sha256": "210e50fcb8e2cdd39b263afc8a532ee1479dbe2e2d131298739807c26b10bbaf"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Assets.xcassets/umrah.imageset/umrah@3x.png",
+    "sha256": "854f1c6257ed2b302318839441bb91200003a24e5226c4ee1723a092469c298a"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Fonts/Faruma.ttf",
+    "sha256": "ff5985587f10897623704d8269b83e9f63e49dd58625078cac81204ee4d797e5"
+  },
+  {
+    "source": "ZamzamSwift/Resources/Fonts/MVWaheed.otf",
+    "sha256": "2034c1bfb3b2edb0a4f163ab6fffdfc9c0fe6a4e6b068f19f054e5b1002e2a04"
+  }
+]
