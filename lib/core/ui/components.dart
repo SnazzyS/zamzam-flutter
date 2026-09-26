@@ -135,6 +135,7 @@ class FloatingBackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Semantics(
     label: 'Back',
+    onTap: () => context.pop(),
     button: true,
     child: ExcludeSemantics(
       child: Container(

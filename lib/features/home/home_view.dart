@@ -49,6 +49,7 @@ class HomeView extends StatelessWidget {
                 final module = HomeModule.values[index];
                 return Semantics(
                   label: module.title,
+                  onTap: () => context.push('/home/${module.name}'),
                   button: true,
                   child: ExcludeSemantics(
                     child: CupertinoButton(

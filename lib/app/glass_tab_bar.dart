@@ -131,6 +131,7 @@ class _TabItemState extends State<_TabItem>
   @override
   Widget build(BuildContext context) => Semantics(
     label: widget.tab.label,
+    onTap: widget.onTap,
     button: true,
     selected: widget.selected,
     child: ExcludeSemantics(
