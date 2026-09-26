@@ -6,7 +6,7 @@ The reference and existing Android repositories remain unchanged.
 ## Verified baseline
 
 - 39 Swift tests passed on the iPhone 17 Pro / iOS 26.5 simulator on 2026-09-26.
-- Public screen capture/navigation harness is running separately from the Swift repository.
+- Public navigation harness passed: all six Home destinations, five root tabs and checklist swiping. Twelve reference captures are in `reference/ios-26.5/`. Authentication states, video and wider device coverage remain pending.
 - Authentication and passport runtime coverage still requires a designated test account.
 
 ## Screen inventory

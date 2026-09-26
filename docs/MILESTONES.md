@@ -4,8 +4,8 @@ Each small coherent increment is verified, committed and pushed to main. Impleme
 
 | Milestone | Implementation | Verification |
 | --- | --- | --- |
-| 00 — Reference baseline | Source audit complete | 39 Swift tests pass; screen capture pending |
-| 01 — Flutter foundation | Pending | Pending |
+| 00 — Reference baseline | Source audit complete | 39 Swift tests and public navigation harness pass; 12 captures; private states/video pending |
+| 01 — Flutter foundation | Implemented | Analysis + widget test pass; iOS/Android debug builds and installation/launch pass |
 | 02 — Navbar appearance | Pending | Pending |
 | 03 — Navbar behavior | Pending | Pending |
 | 04 — Shared components | Pending | Pending |
