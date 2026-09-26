@@ -10,7 +10,7 @@ Each small coherent increment is verified, committed and pushed to main. Impleme
 | 03 — Navbar behavior | Implemented | Analysis and 4 widget tests pass: independent stack retention, reselection, RTL order and Android Back |
 | 04 — Shared components | Implemented | Analysis and 6 tests pass, including compact/large-text retry and busy-action suppression; visual checks continue with consumer screens |
 | 05 — Home header and tiles | Implemented | Analysis, 7 tests and both debug builds pass; six links return correctly; iOS text bounds within 1 logical pixel of reference after font calibration; Android capture reviewed |
-| 06 — Settings | Pending | Pending |
+| 06 — Settings | Persistence implemented; controls next | Analysis and 4 focused tests pass: defaults, round trips, serialized rapid writes, save failure rollback |
 | 07 — Shared content service | Pending | Pending |
 | 08 — Trips card | Pending | Pending |
 | 09 — Trips data and states | Pending | Pending |
