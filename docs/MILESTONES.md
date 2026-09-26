@@ -8,7 +8,7 @@ Each small coherent increment is verified, committed and pushed to main. Impleme
 | 01 — Flutter foundation | Implemented | Analysis + widget test pass; iOS/Android debug builds and installation/launch pass |
 | 02 — Navbar appearance | Implemented | Analysis, 2 widget tests, both builds, 5-state iOS UI test and Android capture pass; intrinsic SF Symbol sizing visually corrected |
 | 03 — Navbar behavior | Implemented | Analysis and 4 widget tests pass: independent stack retention, reselection, RTL order and Android Back |
-| 04 — Shared components | Pending | Pending |
+| 04 — Shared components | Implemented | Analysis and 6 tests pass, including compact/large-text retry and busy-action suppression; visual checks continue with consumer screens |
 | 05 — Home header and tiles | Pending | Pending |
 | 06 — Settings | Pending | Pending |
 | 07 — Shared content service | Pending | Pending |
