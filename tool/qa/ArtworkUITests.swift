@@ -2,7 +2,7 @@ import XCTest
 
 final class ArtworkUITests: XCTestCase {
     func capture(_ name: String, app: XCUIApplication) {
-        let attachment = XCTAttachment(screenshot: app.screenshot())
+        let attachment = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         attachment.name = name
         attachment.lifetime = .keepAlways
         add(attachment)
@@ -45,4 +45,22 @@ final class ArtworkUITests: XCTestCase {
     func testSwiftChecklist() {
         checklist("mv.zamzam.zamzamMobile", prefix: "swift")
     }
+
+    func office(_ bundle: String, prefix: String) {
+        XCUIDevice.shared.orientation = .portrait
+        let app = XCUIApplication(bundleIdentifier: bundle)
+        app.launch()
+        open("އޮފީސް", app: app)
+        capture("\(prefix)-office-portrait", app: app)
+        XCUIDevice.shared.orientation = .landscapeLeft
+        Thread.sleep(forTimeInterval: 1)
+        capture("\(prefix)-office-landscape", app: app)
+        XCUIDevice.shared.orientation = .portrait
+        if prefix == "flutter" {
+            app.buttons["Back"].tap()
+            XCTAssertTrue(app.buttons["އޮފީސް"].firstMatch.waitForExistence(timeout: 5))
+        }
+    }
+    func testFlutterOffice() { office("mv.zamzam.flutter", prefix: "flutter") }
+    func testSwiftOffice() { office("mv.zamzam.zamzamMobile", prefix: "swift") }
 }
