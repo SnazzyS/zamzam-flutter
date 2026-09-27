@@ -14,7 +14,7 @@ class ServicePager extends StatefulWidget {
 }
 
 class _ServicePagerState extends State<ServicePager> {
-  final _pages = PageController();
+  final _pages = PageController(keepPage: false);
   int _selected = 0;
   int? _target;
   int _animation = 0;

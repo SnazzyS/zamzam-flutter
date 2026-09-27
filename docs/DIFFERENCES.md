@@ -35,3 +35,7 @@ Source requests a 1.35 placeholder aspect ratio, but the Swift runtime renders l
 ## Services card review
 
 The Swift image box fits its 1.24 aspect within the fixed outer frame, leaving surface-colored side insets. Flutter reproduces those insets rather than filling the entire outer frame. Multiline descriptions retain the first baseline and add 4 logical pixels only between lines. Cards may grow for compact/large-text content that would otherwise clip; normal reference-size content retains its original height. The standalone preview has unclipped shadows; the following pager milestone restores the reference page clipping. Small renderer-dependent text-width differences remain for the final sweep.
+
+## Checklist artwork placement
+
+The iPhone reference renders a 774-point-tall image shifted down 31 points inside the 774-point content region. Comparing the original image at candidate scales/offsets confirmed this is a placement effect, not an asset border. Flutter preserves the full-height crop and shifts by half the top safe-area inset, with white behind it. All four original illustrations remain in the Swift order, including the original asset-name/content mismatch. Portrait phone comparison is recorded; the complete tablet/landscape reference sweep remains milestone 31. Page indicators are passive, announce the current page, and obey reduced motion.

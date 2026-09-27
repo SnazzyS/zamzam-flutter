@@ -4,6 +4,7 @@ import '../core/strings.dart';
 import '../features/settings/settings_view.dart';
 import '../features/home/home_view.dart';
 import '../features/content/content_screen.dart';
+import '../features/artwork/checklist_view.dart';
 import '../core/theme.dart';
 import 'glass_tab_bar.dart';
 
@@ -37,6 +38,7 @@ GoRouter createRouter({
                               builder: (context, state) => switch (module) {
                                 HomeModule.trips => const TripsView(),
                                 HomeModule.services => const ServicesView(),
+                                HomeModule.checklist => const ChecklistView(),
                                 _ => HomeDestinationHeader(module: module),
                               },
                             ),

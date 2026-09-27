@@ -51,6 +51,12 @@ void main() {
       await tester.tap(find.byKey(const ValueKey('service-dot-1')));
       await tester.pumpAndSettle();
       expect(find.text('Second service'), findsOneWidget);
+      await tester.tap(find.byKey(const ValueKey('back')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const ValueKey('home-services')));
+      await tester.pumpAndSettle();
+      expect(find.text('First service'), findsOneWidget);
+
       services = [
         {'title': 'Replacement service', 'desc': 'Changed'},
       ];
