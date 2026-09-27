@@ -34,10 +34,11 @@ GoRouter createRouter({
                           for (final module in HomeModule.values)
                             GoRoute(
                               path: module.name,
-                              builder: (context, state) =>
-                                  module == HomeModule.trips
-                                  ? const TripsView()
-                                  : HomeDestinationHeader(module: module),
+                              builder: (context, state) => switch (module) {
+                                HomeModule.trips => const TripsView(),
+                                HomeModule.services => const ServicesView(),
+                                _ => HomeDestinationHeader(module: module),
+                              },
                             ),
                           ...homeChildren,
                         ]

@@ -61,76 +61,78 @@ class ServiceCard extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) => Directionality(
-    textDirection: TextDirection.ltr,
-    child: Container(
-      width: width,
-      height: math.max(height, cardHeight(context, width, service: service)),
-      decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(24),
-        border: Border.all(color: AppTheme.divider.withValues(alpha: .72)),
-        boxShadow: const [
-          BoxShadow(
-            color: Color(0x21000000),
-            blurRadius: 48,
-            offset: Offset(0, 16),
-          ),
-        ],
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(24),
-        child: Column(
-          children: [
-            const SizedBox(height: 14),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(18),
-              child: SizedBox(
-                width: width - 28,
-                height: math.min(width * 1.16, 430) * .54,
-                child: ColoredBox(
-                  color: AppTheme.surfaceVariant,
-                  child: Center(
-                    child:
-                        image ??
-                        RemoteImageBox(service.imageUrl, aspectRatio: 1.24),
+  Widget build(BuildContext context) => MergeSemantics(
+    child: Directionality(
+      textDirection: TextDirection.ltr,
+      child: Container(
+        width: width,
+        height: math.max(height, cardHeight(context, width, service: service)),
+        decoration: BoxDecoration(
+          color: AppTheme.surface,
+          borderRadius: BorderRadius.circular(24),
+          border: Border.all(color: AppTheme.divider.withValues(alpha: .72)),
+          boxShadow: const [
+            BoxShadow(
+              color: Color(0x21000000),
+              blurRadius: 48,
+              offset: Offset(0, 16),
+            ),
+          ],
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(24),
+          child: Column(
+            children: [
+              const SizedBox(height: 14),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(18),
+                child: SizedBox(
+                  width: width - 28,
+                  height: math.min(width * 1.16, 430) * .54,
+                  child: ColoredBox(
+                    color: AppTheme.surfaceVariant,
+                    child: Center(
+                      child:
+                          image ??
+                          RemoteImageBox(service.imageUrl, aspectRatio: 1.24),
+                    ),
                   ),
                 ),
               ),
-            ),
-            const SizedBox(height: 16),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: SizedBox(
-                width: double.infinity,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    DvText(
-                      service.title,
-                      size: 25,
-                      weight: FontWeight.w600,
-                      maxLines: 2,
-                      minScale: .76,
-                      widthBasis: TextWidthBasis.longestLine,
-                    ),
-                    const SizedBox(height: 8),
-                    DvText(
-                      service.description.isEmpty
-                          ? Dv.servicesDescriptionFallback
-                          : service.description,
-                      size: 15,
-                      color: AppTheme.secondary,
-                      maxLines: 4,
-                      align: TextAlign.left,
-                      widthBasis: TextWidthBasis.longestLine,
-                      lineSpacing: 4,
-                    ),
-                  ],
+              const SizedBox(height: 16),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      DvText(
+                        service.title,
+                        size: 25,
+                        weight: FontWeight.w600,
+                        maxLines: 2,
+                        minScale: .76,
+                        widthBasis: TextWidthBasis.longestLine,
+                      ),
+                      const SizedBox(height: 8),
+                      DvText(
+                        service.description.isEmpty
+                            ? Dv.servicesDescriptionFallback
+                            : service.description,
+                        size: 15,
+                        color: AppTheme.secondary,
+                        maxLines: 4,
+                        align: TextAlign.left,
+                        widthBasis: TextWidthBasis.longestLine,
+                        lineSpacing: 4,
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     ),

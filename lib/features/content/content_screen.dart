@@ -5,6 +5,7 @@ import '../../core/ui/components.dart';
 import 'content_models.dart';
 import 'content_repository.dart';
 import 'trip_card.dart';
+import 'service_pager.dart';
 
 class ContentScope extends InheritedWidget {
   const ContentScope({
@@ -31,6 +32,20 @@ class TripsView extends StatelessWidget {
     errorTitle: Dv.tripsErrorTitle,
     isEmpty: (content) => content.packages.isEmpty,
     builder: (content) => TripList(packages: content.packages),
+  );
+}
+
+class ServicesView extends StatelessWidget {
+  const ServicesView({super.key});
+  @override
+  Widget build(BuildContext context) => ContentScreen(
+    title: Dv.servicesTitle,
+    image: 'services',
+    emptyTitle: Dv.servicesEmptyTitle,
+    emptyBody: Dv.servicesEmptyBody,
+    errorTitle: Dv.servicesErrorTitle,
+    isEmpty: (content) => content.services.isEmpty,
+    builder: (content) => ServicePager(services: content.services),
   );
 }
 
