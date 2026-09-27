@@ -17,7 +17,7 @@ Each small coherent increment is verified, committed and pushed to main. Impleme
 | 10 — Services card | Implemented | Analysis, compact/large-text fallback/long-copy tests and both preview builds pass; iOS/Android captures reviewed; source image inset, text block alignment, and 4-point inter-line spacing reproduced |
 | 11 — Services paging | Implemented | Analysis and 2 widget tests pass: LTR end boundaries, RTL dot selection, accessibility wrap, count reset, reduced motion; both builds and complete-pager captures reviewed |
 | 12 — Services data and states | Implemented | Analysis, 32 regression tests and shared-navigation test pass; both builds pass; five live pages, boundary swipe, shared Trips payload and tab retention checked on iOS; all five pages/Back checked on Android |
-| 13 — Umrah and Dua | Pending | Pending |
+| 13 — Umrah and Dua | Implemented using shared header layouts | Both header-only screens compared against Swift captures; iOS UI test and Android navigation/Back checks pass; no extra content added |
 | 14 — Checklist | Pending | Pending |
 | 15 — Office | Pending | Pending |
 | 16 — One weather card | Pending | Pending |
