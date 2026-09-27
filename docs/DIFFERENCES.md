@@ -31,3 +31,7 @@ The segmented control uses a Flutter capsule to match the current Swift system p
 ## Trips image sizing
 
 Source requests a 1.35 placeholder aspect ratio, but the Swift runtime renders loaded square package images at their natural square ratio. Flutter preserves this observed behavior, including the 1.35 loading/error placeholder. Controlled preview: `flutter run -t tool/previews/trips.dart`. Public artwork fixture was fetched from the existing package URL on 2026-09-27.
+
+## Services card review
+
+The Swift image box fits its 1.24 aspect within the fixed outer frame, leaving surface-colored side insets. Flutter reproduces those insets rather than filling the entire outer frame. Multiline descriptions retain the first baseline and add 4 logical pixels only between lines. Cards may grow for compact/large-text content that would otherwise clip; normal reference-size content retains its original height. The standalone preview has unclipped shadows; the following pager milestone restores the reference page clipping. Small renderer-dependent text-width differences remain for the final sweep.
