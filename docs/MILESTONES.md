@@ -20,7 +20,7 @@ Each small coherent increment is verified, committed and pushed to main. Impleme
 | 13 — Umrah and Dua | Implemented using shared header layouts | Both header-only screens compared against Swift captures; iOS UI test and Android navigation/Back checks pass; no extra content added |
 | 14 — Checklist | Implemented | Analysis, paging/boundary/landscape/tab-retention/reopen tests and both debug builds pass; all four pages captured on iOS/Android, page announcements and Back verified; measured reference artwork offset reproduced; full device sweep pending |
 | 15 — Office | Implemented | Analysis, Home/Checklist regression tests and both debug builds pass; iPhone/iPad portrait and landscape captures compared with Swift, Android phone/tablet-sized portrait/landscape captures and Back checks pass |
-| 16 — One weather card | Pending | Pending |
+| 16 — One weather card | Implemented as a controlled preview | Analysis, condition/formatting and compact/large-text tests, both debug builds and fixed-data iOS/Android capture review pass; measured Swift stack geometry and native iOS rounded numerals reproduced; production data wiring belongs to milestone 19 |
 | 17 — Weather motion | Pending | Pending |
 | 18 — Remaining cities | Pending | Pending |
 | 19 — Weather data and recovery | Pending | Pending |

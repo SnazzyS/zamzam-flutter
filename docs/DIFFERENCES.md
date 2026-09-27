@@ -39,3 +39,9 @@ The Swift image box fits its 1.24 aspect within the fixed outer frame, leaving s
 ## Checklist artwork placement
 
 The iPhone reference renders a 774-point-tall image shifted down 31 points inside the 774-point content region. Comparing the original image at candidate scales/offsets confirmed this is a placement effect, not an asset border. Flutter preserves the full-height crop and shifts by half the top safe-area inset, with white behind it. All four original illustrations remain in the Swift order, including the original asset-name/content mismatch. Portrait phone comparison is recorded; the complete tablet/landscape reference sweep remains milestone 31. Page indicators are passive, announce the current page, and obey reduced motion.
+
+## Weather card calibration
+
+Controlled preview: `flutter run -t tool/previews/weather.dart`. The copied Swift fixture uses the same 37-degree/18-km-h/10-percent readings and freezes its original canvas at time zero; `tool/qa/create_swift_weather_fixture.py` creates it only under ignored artifacts after verifying the clean reference commit. The original Swift repository is unchanged.
+
+The Swift runtime's 224-point card clips a 231-point content stack, with a 28-2/3-point constrained title line box. Flutter reproduces those measured dimensions. At enlarged system text it permits additional height and fits temperature on one line to avoid overflow. The iOS adapter uses public UIFont rounded/monospaced-digit APIs to preserve numeral shapes, Arabic fallback and line metrics, with a bounded 128-entry cache. Apple fonts are not bundled on either platform. Android uses installed system typefaces; remaining numeric glyph differences are a platform exception. Final renderer/typography convergence remains milestone 31.

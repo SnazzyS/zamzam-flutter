@@ -63,4 +63,14 @@ final class ArtworkUITests: XCTestCase {
     }
     func testFlutterOffice() { office("mv.zamzam.flutter", prefix: "flutter") }
     func testSwiftOffice() { office("mv.zamzam.zamzamMobile", prefix: "swift") }
+
+    func testWeatherPreview() {
+        XCUIDevice.shared.orientation = .portrait
+        for (bundle, name) in [("mv.zamzam.reference.weather", "swift-weather"), ("mv.zamzam.flutter", "flutter-weather")] {
+            let app = XCUIApplication(bundleIdentifier: bundle)
+            app.launch()
+            Thread.sleep(forTimeInterval: 2)
+            capture(name, app: app)
+        }
+    }
 }
