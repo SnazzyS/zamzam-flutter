@@ -64,6 +64,30 @@ final class ArtworkUITests: XCTestCase {
     func testFlutterOffice() { office("mv.zamzam.flutter", prefix: "flutter") }
     func testSwiftOffice() { office("mv.zamzam.zamzamMobile", prefix: "swift") }
 
+    func testFlutterWeatherMotion() {
+        XCUIDevice.shared.orientation = .portrait
+        let app = XCUIApplication(bundleIdentifier: "mv.zamzam.flutter")
+        app.launch()
+        Thread.sleep(forTimeInterval: 3)
+        capture("flutter-motion-clear-clouds-1", app: app)
+        Thread.sleep(forTimeInterval: 0.8)
+        capture("flutter-motion-clear-clouds-2", app: app)
+        app.swipeUp()
+        Thread.sleep(forTimeInterval: 1)
+        let storm = app.descendants(matching: .any).matching(
+            NSPredicate(format: "label CONTAINS %@", "ގުގުރުމާ ވާރޭ")).firstMatch
+        XCTAssertTrue(storm.isHittable)
+        capture("flutter-motion-rain-storm", app: app)
+        app.buttons["ހޯމް"].tap()
+        app.buttons["މޫސުން"].tap()
+        XCTAssertTrue(storm.isHittable)
+        XCUIDevice.shared.press(.home)
+        app.activate()
+        XCTAssertTrue(storm.waitForExistence(timeout: 5))
+        XCTAssertTrue(storm.isHittable)
+        capture("flutter-motion-resumed", app: app)
+    }
+
     func testWeatherPreview() {
         XCUIDevice.shared.orientation = .portrait
         for (bundle, name) in [("mv.zamzam.reference.weather", "swift-weather"), ("mv.zamzam.flutter", "flutter-weather")] {
