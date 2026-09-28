@@ -21,7 +21,7 @@ Each small coherent increment is verified, committed and pushed to main. Impleme
 | 14 — Checklist | Implemented | Analysis, paging/boundary/landscape/tab-retention/reopen tests and both debug builds pass; all four pages captured on iOS/Android, page announcements and Back verified; measured reference artwork offset reproduced; full device sweep pending |
 | 15 — Office | Implemented | Analysis, Home/Checklist regression tests and both debug builds pass; iPhone/iPad portrait and landscape captures compared with Swift, Android phone/tablet-sized portrait/landscape captures and Back checks pass |
 | 16 — One weather card | Implemented as a controlled preview | Analysis, condition/formatting and compact/large-text tests, both debug builds and fixed-data iOS/Android capture review pass; measured Swift stack geometry and native iOS rounded numerals reproduced; production data wiring belongs to milestone 19 |
-| 17 — Weather motion | Pending | Pending |
+| 17 — Weather motion | Implemented | Four focused tests passed before the Xcode license interruption; current analysis and Android build/runtime checks pass; all 12 Swift/Flutter scene keyframes compared; latest iOS runtime/build verification pending Xcode license acceptance |
 | 18 — Remaining cities | Pending | Pending |
 | 19 — Weather data and recovery | Pending | Pending |
 | 20 — Prayer layout | Pending | Pending |
@@ -45,3 +45,7 @@ Run formatting check, analysis, relevant unit/widget/integration checks, review 
 ## Final gate
 
 All screens and meaningful loading/empty/error/cached states; compact/large phones, tablet, landscape, app/system font scales, VoiceOver/TalkBack, keyboard, back gestures, cold launch, resume and Android process recreation. Live public smoke plus separately designated test-account login/passport checks. Profile physical devices; store publication and migration are outside scope.
+
+## Current environment gate — 2026-09-28
+
+Xcode now requires license acceptance. This blocks simulator commands, iOS builds, and the macOS native-asset hook used by fresh Flutter tests. The existing four Weather tests passed before this environment change; static analysis and the Android motion build/runtime checks passed afterward. Resume iOS motion verification after the user reviews/accepts the Xcode license in Terminal. Milestone 17 implementation is pushed, but its iOS runtime verification is not complete. Next implementation milestone: the remaining city scenes, one at a time.

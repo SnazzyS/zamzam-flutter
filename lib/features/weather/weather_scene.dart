@@ -1,12 +1,21 @@
 import 'dart:math' as math;
 import 'package:flutter/cupertino.dart';
 import 'weather_models.dart';
+import 'weather_timeline.dart';
 
 /// Geometry and colors transcribed from Swift's AnimatedWeatherCanvas.
 class WeatherScenePainter extends CustomPainter {
-  const WeatherScenePainter({required this.style, this.time = 0});
+  const WeatherScenePainter({
+    required this.style,
+    double time = 0,
+    WeatherTimeline? timeline,
+  }) : _fixedTime = time,
+       _timeline = timeline,
+       super(repaint: timeline);
   final WeatherStyle style;
-  final double time;
+  final double _fixedTime;
+  final WeatherTimeline? _timeline;
+  double get time => _timeline?.seconds ?? _fixedTime;
 
   @override
   void paint(Canvas canvas, Size size) {

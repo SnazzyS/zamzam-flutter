@@ -13,6 +13,7 @@ void main() => runApp(
       roots: {
         RootTab.weather: (_) => ScreenContainer(
           child: WeatherCard(
+            frameTime: 0,
             city: WeatherCity.makkah,
             display: WeatherDisplay(
               reading: WeatherReading(

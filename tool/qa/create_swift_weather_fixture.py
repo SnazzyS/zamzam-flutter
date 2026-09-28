@@ -35,3 +35,35 @@ print(target)
 
 canvas = target / 'ZamzamSwift' / 'Views' / 'Schedule' / 'MakkahWeatherHero.swift'
 canvas.write_text(canvas.read_text().replace('isAnimated: display.isAnimated && !reduceMotion', 'isAnimated: false'))
+
+# Export the unmodified drawing commands at identical deterministic frame times.
+# The fixture-only time input never changes the original Swift source.
+content = canvas.read_text().replace('    let isAnimated: Bool\n', '    let isAnimated: Bool\n    var referenceTime: TimeInterval = 0\n').replace('canvas(time: 0)', 'canvas(time: referenceTime)')
+content += '''
+@MainActor
+func exportWeatherReferenceFrames() {
+    let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        .appendingPathComponent("weather-frames", isDirectory: true)
+    try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+    let styles: [WeatherAnimationStyle] = [.clear, .cloudy, .rain, .staticFallback]
+    for style in styles {
+        for frame in 0..<3 {
+            let view = AnimatedWeatherCanvas(location: .makkah, style: style,
+                isAnimated: false, referenceTime: Double(frame) * 0.8)
+                .frame(width: 354, height: 231)
+            let renderer = ImageRenderer(content: view)
+            renderer.scale = 3
+            if let data = renderer.uiImage?.pngData() {
+                try? data.write(to: directory.appendingPathComponent("\\(style.rawValue)-\\(frame).png"))
+            }
+        }
+    }
+}
+'''
+canvas.write_text(content)
+view.write_text(view.read_text().replace('''        }
+    }
+}''', '''        }
+        .onAppear { exportWeatherReferenceFrames() }
+    }
+}'''))

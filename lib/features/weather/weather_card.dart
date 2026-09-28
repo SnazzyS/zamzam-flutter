@@ -6,12 +6,18 @@ import '../../core/strings.dart';
 import '../../core/theme.dart';
 import '../../core/ui/dhivehi_text.dart';
 import 'weather_models.dart';
-import 'weather_scene.dart';
+import 'weather_motion.dart';
 
 class WeatherCard extends StatelessWidget {
-  const WeatherCard({super.key, required this.city, required this.display});
+  const WeatherCard({
+    super.key,
+    required this.city,
+    required this.display,
+    this.frameTime,
+  });
   final WeatherCity city;
   final WeatherDisplay display;
+  final double? frameTime;
   @override
   Widget build(BuildContext context) {
     // Retain 224 points normally; permit readable content at enlarged text sizes.
@@ -55,7 +61,11 @@ class WeatherCard extends StatelessWidget {
             child: Stack(
               fit: StackFit.expand,
               children: [
-                CustomPaint(painter: WeatherScenePainter(style: display.style)),
+                WeatherScene(
+                  style: display.style,
+                  enabled: display.animates,
+                  frameTime: frameTime,
+                ),
                 Padding(
                   padding: const EdgeInsets.all(18),
                   child: Directionality(
